@@ -9,9 +9,7 @@ int main() {
         printf("Invalid input. Please enter a positive array size.\n");
         return 1;
     }
-
     int arr[n];
-
     printf("Enter %d elements:\n", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
