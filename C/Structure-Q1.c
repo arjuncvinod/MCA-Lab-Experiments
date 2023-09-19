@@ -1,6 +1,8 @@
+// Write a structure to store the roll no., name, age (between 11 to 14) and address of n students. Store the information of the students.
+// a.- Write a function to print the names of all the students having age 14.
+// b- Write another function to print the names of all the students having even roll no.
+// c- Write another function to display the details of the student whose roll no is given (i.e. roll no. entered by the user).
 #include <stdio.h>
-
-
 struct student {
     int roll;
     char name[25];
