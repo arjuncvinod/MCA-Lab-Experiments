@@ -6,4 +6,4 @@ if len(colors) > 0:
     print("First color:", colors[0])
     print("Last color:", colors[-1])
 else:
-    print("No colors entered.")
+    print("No colors entered.") 
