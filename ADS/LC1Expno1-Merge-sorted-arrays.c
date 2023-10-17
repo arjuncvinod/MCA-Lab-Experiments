@@ -20,15 +20,15 @@ scanf("%d",&b[i]);
 void merge (int n1,int n2,int a[],int b[])
 {
 int i=0,j=0,k=0;
-int c[n1+n2];
+int s[n1+n2];
 while(i<n1 && j<n2){
 if(a[i]<=b[j])
 {
-c[k]=a[i];
+s[k]=a[i];
 k++;
 i++;
 }else{
-c[k]=b[j];
+s[k]=b[j];
 k++;
 j++;
 
@@ -36,18 +36,18 @@ j++;
 }
 
 while(n1>i){
-c[k]=a[i];
+s[k]=a[i];
 k++;
 i++;
 }
 
 while(n2>j){
-c[k]=b[j];
+s[k]=b[j];
 k++;
 j++;
 }
 for(i=0;i<n1+n2;i++){
-printf("%d ",c[i]);
+printf("%d ",s[i]);
 }
 }
 
