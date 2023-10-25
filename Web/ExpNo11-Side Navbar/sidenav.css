@@ -1,31 +1,25 @@
-
-        a{
-            text-decoration: none;
-            padding:6px 8px 6px 16px;
-            color: white;
-        }
-        .sidenav
-        {
-            height: 100%;
-            background-color: green;
-            width: 160px;
-            padding-top: 20px;
-            position: absolute;
-            top: 1%;
-            left: 1%;
-        }
-        body
-        {
-            margin: 0;
-        }
-        a:hover
-        {
-            color: red;
-        }
-        .main
-        {
-            margin-left: 200px;
-            padding: 0px 10px 0px 10px;
-           
-        }
-    
+body{
+display:flex;
+flex-direction:row;
+align-items:start;
+}
+.sidenav{
+display:flex;
+flex-direction:column;
+gap:40px;
+background-color:green;
+height:90vh;
+padding:10px;
+}
+a{
+text-decoration:none;
+color:white;
+font-size: 18px;
+}
+a:hover{
+color:red;
+}
+.main h1{
+padding:0;
+margin:0;
+}
