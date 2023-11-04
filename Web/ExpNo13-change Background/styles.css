@@ -1,0 +1,18 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: black;
+            transition: .5s;
+        }
+        h1{
+            font-size: 6rem;
+            letter-spacing:3px;
+            user-select: none;
+            color: white;
+        }
