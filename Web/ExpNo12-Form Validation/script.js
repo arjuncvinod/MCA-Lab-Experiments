@@ -21,18 +21,21 @@ function validateForm() {
     // Check if First Name is blank
     if (fname.trim()==="") {
         fnameWarning.innerHTML = "First Name should not be blank";
+        document.myForm.fname.focus()
         return false;
     }
 
     // Check if Day, Month, and Year in Date of Birth are selected
     if (dob === "") {
         dobWarning.innerHTML = "Please select the Date of Birth";
+        document.myForm.dob.focus()
         return false;
     }
 
     // Check if Mobile number length is 10
     if (mobile.length !== 10) {
         mobileWarning.innerHTML = "Mobile number should be 10 digits long";
+        document.myForm.ph.focus()
         return false;
     }
 
