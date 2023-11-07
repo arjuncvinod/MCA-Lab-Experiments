@@ -1,18 +1,21 @@
 function validateForm() {
   // Fetch form elements
   var fname = document.forms["myForm"]["fname"].value;
+  var lname = document.forms["myForm"]["lname"].value;
   var dob = document.forms["myForm"]["dob"].value;
   var mobile = document.forms["myForm"]["ph"].value;
   var course = document.querySelector('input[name="course"]:checked');
 
   // Get the warning message elements
   var fnameWarning = document.getElementById("fnameWarning");
+  var lnameWarning = document.getElementById("lnameWarning");
   var dobWarning = document.getElementById("dobWarning");
   var mobileWarning = document.getElementById("mobileWarning");
   var courseWarning = document.getElementById("courseWarning");
 
   // Reset warning messages
   fnameWarning.innerHTML = "";
+  lnameWarning.innerHTML = "";
   dobWarning.innerHTML = "";
   mobileWarning.innerHTML = "";
   courseWarning.innerHTML = "";
@@ -21,6 +24,12 @@ function validateForm() {
   if (fname.trim() === "") {
     fnameWarning.innerHTML = "First Name should not be blank";
     document.myForm.fname.focus();
+    return false;
+  }
+  // Check if last Name is blank
+  if (lname.trim() === "") {
+    lnameWarning.innerHTML = "Second Name should not be blank";
+    document.myForm.lname.focus();
     return false;
   }
 
