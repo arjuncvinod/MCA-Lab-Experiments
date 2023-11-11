@@ -8,31 +8,7 @@ struct node
     struct node *prev;
 };
 struct node *start=NULL,*new_node,*current,*tail;
-void create()
-{
- int n;
- printf("enter the number of nodes needed:\n");
- scanf("%d",&n);
- printf("Enter %d data:",n);
- for(int i=0;i<n;i++)
- {
- new_node=(struct node *)malloc(sizeof(struct node));
- scanf("%d",&new_node->data);
- new_node->prev=NULL;
- new_node->next=NULL;
- if(start==NULL)
- {
-     start=tail=new_node;
-     current=new_node;
- }
- else{
-    current->next=new_node;
-    new_node->prev=current;
-    current=tail=new_node;
-
- }
- }
-}
+int count=0;
 void insrt_beginig()
 {
  new_node=(struct node *)malloc(sizeof(struct node));
@@ -43,12 +19,14 @@ void insrt_beginig()
  if(start==NULL)
  {
      start=new_node;
-
+     tail=new_node;
+     count++;
  }
  else{
     start->prev=new_node;
     new_node->next=start;
     start=new_node;
+    count++;
  }
 }
 void insrt_end()
@@ -61,35 +39,30 @@ void insrt_end()
  if(start==NULL)
  {
      start=new_node;
-
+     tail=new_node;
+      count++;
  }
  else
  {
    tail->next=new_node;
    new_node->prev=tail;
    tail=new_node;
+   count++;
  }
 }
-int count()
-{     int count=0;
-      for(current=start;current!=NULL;current=current->next)
-    {
-        count++;
-    }
-    return count;
-}
+
 void insrt_at_position()
 {
   int i=1;
   int pos;
-  int co=count();
+
   printf("enter position to insert:\n");
   scanf("%d",&pos);
   if(pos<1)
   {
       printf("invalid location\n");
   }
-  else if(pos>co)
+  else if(pos>count)
   {
       printf("please check the size of list\n");
   }
@@ -97,10 +70,7 @@ void insrt_at_position()
   {
       insrt_beginig();
   }
-  else if(pos==co)
-  {
-      insrt_end();
-  }
+
   else
   {
      new_node=(struct node *)malloc(sizeof(struct node));
@@ -118,6 +88,8 @@ void insrt_at_position()
     new_node->next=current->next;
     current->next=new_node;
     new_node->next->prev=new_node;
+    count++;
+
   }
 }
 void search()
@@ -150,54 +122,66 @@ void search()
 void delete_beg()
 {
 
-   current=start;
-   if(start==NULL)
+
+   if(count>0)
+    {
+     current=start;
+     start=start->next;
+     free(current);
+     count--;
+    
+    }
+   else if(start==NULL)
    {
        printf("list is empty\n");
    }
    else
-    {
-     start=start->next;
-     start->prev=NULL;
-     free(current);
+   {
+       printf("list is empty\n");
    }
 }
 void delete_end()
 {
-if(start==NULL)
-   {
-       printf("list is empty\n");
-   }
-   else
-    {
-    current=tail;
-    tail->prev->next=NULL;
-    tail=tail->prev;
-    free(current);
-   }
+        if (count > 0) {
+          if (start == tail) {
+            free(start);
+            start = tail = NULL;
+          }
+          else {
+            current = start;
+            while (current->next != tail)
+                current = current->next;
+            free(tail);
+            tail = current;
+            tail->next = NULL;
+        }
+        --count;
+    } else {
+        printf("list is empty\n");
+    }
 }
 void delete_pos()
 {
     int j=1;
     int pos;
-    int co;
-    
+
+
     printf("enter position to delete:\n");
     scanf("%d",&pos);
-    co=count();
+
     if(start==NULL)
     {
-        printf("tere is nothing to delete\n");
+        printf("there is nothing to delete\n");
     }
     else if(pos==1)
     {
         delete_beg();
     }
-     else if(pos>co)
+     else if(pos>count)
     {
         printf("invalid location\n");
     }
-    else if(pos==co)
+    else if(pos==count)
     {
         delete_end();
     }
@@ -211,6 +195,7 @@ void delete_pos()
    current->prev->next=current->next;
    current->next->prev=current->prev;
    free(current);
+   count--;
     }
 }
 
@@ -228,8 +213,8 @@ void display()
 }
 int main()
 {
-    create();
-    display();
+   //create();
+    //display();
     int opt;
     int a=1;
     while(a==1)
