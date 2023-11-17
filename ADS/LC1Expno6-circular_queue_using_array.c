@@ -67,11 +67,41 @@ void display()
         printf("%d",queue[rear]);
     }
 }
-void serach()
+void search()
 {
+    int srch;
+    int flag=0;
+    printf("Enter the value to search:\n");
+    scanf("%d",&srch);
 
+   int i=front;
 
+        while(i!=rear)
+        {
+           if(queue[i]==srch)
+           {
+               flag=1;
+               break;
+           }
+           if(queue[rear]==srch)
+           {
+               flag=1;
+               break;
+           }
+          i=(i+1)%n;
+        }
+       // printf("%d",queue[rear]);
+       if(flag==1)
+       {
+           printf("value is found\n");
+       }
+       else
+        {
+        printf("Value is not found\n");
+       }
 }
+
+
 
     int opt;
     int a=1;
@@ -101,7 +131,7 @@ void serach()
         }
     case 3:
         {
-           // search();
+           search();
             break;
         }
     case 4:
