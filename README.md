@@ -1,3 +1,5 @@
+![ViewCount](https://views.whatilearened.today/views/github/arjuncvinod/MCA-Lab-Experiments.svg?cache=remove)
+
 # MCA Lab Experiments
 
 ### [Web Programming Live Preview](https://arjuncvinod.me/MCA-Lab-Experiments/)
