@@ -33,7 +33,7 @@ if ($conn) {
 
         while ($row = mysqli_fetch_array($result)) {
             if (($row['username'] == $username) && ($row['password'] == $password)) {
-                header("Location: welcome.php");
+                header("Location: welcome.php?username=".$username);
                 exit();
             } else {
                 echo "<script>alert('Incorrect Username or Password')</script>";
@@ -46,3 +46,11 @@ if ($conn) {
 ?>
 </body>
 </html>
+
+
+<!-- 
+
+username : user
+password : 1234
+
+ -->
