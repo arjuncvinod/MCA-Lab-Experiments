@@ -1,5 +1,3 @@
-# graphics/rectangle.py
-
 def area(length, width):
     return length * width
 

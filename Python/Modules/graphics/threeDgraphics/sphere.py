@@ -1,4 +1,3 @@
-# graphics/threeDgraphics/sphere.py
 import math
 
 def surface_area(radius):

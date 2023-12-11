@@ -1,22 +1,16 @@
-# Example program using selective import and user inputs
-
 from Modules.graphics.rectangle import area as rect_area, perimeter as rect_perimeter
 from Modules.graphics.circle import area as circle_area, perimeter as circle_perimeter
 from Modules.graphics.threeDgraphics.cuboid import surface_area as cuboid_surface_area, volume as cuboid_volume
 
-# Taking user inputs for rectangle
 length_rect = float(input("Enter the length of the rectangle: "))
 width_rect = float(input("Enter the width of the rectangle: "))
 
-# Taking user input for circle
 radius_circle = float(input("Enter the radius of the circle: "))
 
-# Taking user input for cuboid
 length_cuboid = float(input("Enter the length of the cuboid: "))
 width_cuboid = float(input("Enter the width of the cuboid: "))
 height_cuboid = float(input("Enter the height of the cuboid: "))
 
-# Calculating and displaying results
 print("\nRectangle Area:", rect_area(length_rect, width_rect))
 print("Rectangle Perimeter:", rect_perimeter(length_rect, width_rect))
 

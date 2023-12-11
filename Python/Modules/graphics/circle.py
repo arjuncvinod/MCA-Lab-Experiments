@@ -1,4 +1,3 @@
-# graphics/circle.py
 import math
 
 def area(radius):
