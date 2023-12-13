@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/login-styles.css">
 </head>
 
 <body>
     <form method="get" action="">
         <h2>Student Login</h2>
         <div>
-            <label for="username">Username:</label>
+            <label for="username">Email </label>
             <input type="text" name="email" id="username" required>
         </div>
 
         <div>
-            <label for="password">Password:</label>
+            <label for="password">Password </label>
             <input type="password" name="password" id="password" required>
         </div>
 

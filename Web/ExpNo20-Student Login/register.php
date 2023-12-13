@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
-    <link rel="stylesheet" href="register-styles.css">
+    <link rel="stylesheet" href="css/register-styles.css">
 </head>
 
 <body>
@@ -77,8 +77,6 @@ $conn = mysqli_connect($host, $username, $password, $database);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-} else {
-    echo "connected";
 }
 
 if (isset($_POST['submit'])) {
