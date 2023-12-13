@@ -25,7 +25,6 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             } else {
-                // Fetch user details from the database
                 $sql = "SELECT * FROM students WHERE mail = '$email'";
                 $result = mysqli_query($conn, $sql);
 
