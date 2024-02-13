@@ -1,7 +1,89 @@
 # Experiment No : 1
-
-![image](https://github.com/arjuncvinod/MCA-Lab-Experiments/assets/68469520/17e04b69-1aa9-4bba-9852-63f6bed25907)
-
+#### Create a table with following columns.
+**ID character 5**
+**DeptID numeric 2**
+**Name character 15**
+**Design character 15**
+**Basic numeric 10,2**
+**Gender character 1**
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>DeptID</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Basic</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>101</td>
+      <td>1</td>
+      <td>Ram</td>
+      <td>Typist</td>
+      <td>2000.00</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>2</td>
+      <td>Arun</td>
+      <td>Analyst</td>
+      <td>6000.00</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <td>121</td>
+      <td>1</td>
+      <td>Ruby</td>
+      <td>Typist</td>
+      <td>2010.00</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>156</td>
+      <td>3</td>
+      <td>Mary</td>
+      <td>Manager</td>
+      <td>4500.00</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>123</td>
+      <td>2</td>
+      <td>Mridula</td>
+      <td>Analyst</td>
+      <td>6000.00</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>114</td>
+      <td>4</td>
+      <td>Menon</td>
+      <td>Clerk</td>
+      <td>1500.00</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <td>115</td>
+      <td>4</td>
+      <td>Tim</td>
+      <td>Clerk</td>
+      <td>1500.00</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <td>127</td>
+      <td>2</td>
+      <td>Kiran</td>
+      <td>Manager</td>
+      <td>4000.00</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
 
 ```sql
 
