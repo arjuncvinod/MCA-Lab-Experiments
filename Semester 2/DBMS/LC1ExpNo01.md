@@ -1,11 +1,6 @@
 # Experiment No : 1
-#### Create a table with following columns.
-**ID character 5**
-**DeptID numeric 2**
-**Name character 15**
-**Design character 15**
-**Basic numeric 10,2**
-**Gender character 1**
+### Create a table with following columns.
+**ID character 5** <br>**DeptID numeric 2**<br>**Name character 15**<br>**Design character 15**<br>**Basic numeric 10,2**<br>**Gender character 1**
 <table>
   <thead>
     <tr>
