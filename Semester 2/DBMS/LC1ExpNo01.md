@@ -5,8 +5,15 @@
 
 ```sql
 
-CREATE TABLE employee(ID char(5),DeptID numeric(2),Name char(15),Design char(15),Basic numeric(10,2),Gender char(1));
-
+CREATE TABLE employee(
+    ID char(5),
+    DeptID numeric(2),
+    Name char(15),
+    Design char(15),
+    Basic numeric(10,2),
+    Gender char(1));
+```
+```sql
 INSERT INTO employee(ID, DeptID, Name, Design, Basic, Gender)
 VALUES (101, 1, 'Ram', 'Typist', 2000, 'M'),
        (102, 2, 'Arun', 'Analyst', 6000, 'M'),
@@ -75,38 +82,78 @@ SELECT * FROM employee WHERE Design IN ('Analyst', 'Manager');
 ```sql
 SELECT DISTINCT Design AS Designation FROM employee;
 ```
-##### 10. Display the ID, name, department and basic of all the employees who are either
+##### 10. Display the ID, name, department and basic of all the employees who are either MANAGER or CLERK and the basic salary is in the range of 1400 and 4500.
+
+```sql
+SELECT ID,Name,DeptID,BAsic 
+    FROM employee 
+    WHERE (Design="Manager"or"Clerk")AND(Basic BETWEEN 1400 and 4500);
+
+```
+##### 11. Display the number of male staff members
 
 ```sql
 SELECT COUNT(*) AS MaleCount FROM employee WHERE Gender = 'M';
 ```
-##### 
+##### 12. Find the maximum salary of each designation.
 
 ```sql
+SELECT Design AS Designation, MAX(Basic) AS MaxSalary
+    FROM employee
+    GROUP BY Design;
 
 ```
-##### 
+##### 13. Add a column manager-id into the above table.
 
 ```sql
+ALTER TABLE employee ADD manager_id INT;
+```
+##### 14. Update values of manager id of employees as null for 101, 101 for 102, 121, 156. 102 for 123,114,115.121 for 127.
+
+```sql
+UPDATE employee SET manager_id = NULL WHERE ID IN (101, 121, 156);
+```
+```sql
+
+UPDATE employee SET Manager_ID = 102 WHERE ID in(114,115,123);
+```
+```sql
+UPDATE employee SET Manager_ID = 121 WHERE ID ="127";
+```
+##### 15. Display the manager id of the employee Ram.
+
+```sql
+SELECT manager_id FROM employee WHERE Name = 'Ram';
 
 ```
-##### 
+##### 16. Display the employee names and their manager name.
 
 ```sql
+ SELECT e.Name AS EmployeeName, m.Name AS ManagerName
+    FROM employee e
+    LEFT JOIN employee m ON e.manager_id = m.ID;
 
 ```
-##### 
+##### 17. Find the average salary of each department.
 
 ```sql
-
+SELECT DeptID, AVG(Basic) AS AverageSalary 
+    FROM employee
+    GROUP BY DeptID;
 ```
-##### 
+##### 18. Find the maximum salary given to employees.
 
 ```sql
-
+SELECT MAX(Basic) AS MaxSalary FROM employee;
 ```
-##### 
+##### 19. Find the number of employees in each department.
 
 ```sql
-
+SELECT DeptID, COUNT(*) AS EmployeeCount 
+    FROM employee 
+    GROUP BY DeptID;
+```
+##### 20. Find the number of departments existing in the organization.
+```sql
+SELECT COUNT(DISTINCT DeptID) AS NumberOfDepartments  FROM employee;
 ```
