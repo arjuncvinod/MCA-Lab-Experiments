@@ -1,6 +1,7 @@
 # Experiment No : 1
 
-![alt text](image-1.png)
+![image](https://github.com/arjuncvinod/MCA-Lab-Experiments/assets/68469520/17e04b69-1aa9-4bba-9852-63f6bed25907)
+
 
 ```sql
 
