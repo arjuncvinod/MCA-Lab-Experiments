@@ -21,7 +21,7 @@ public class Circle {
         this.radius = radius;
     }
 
-    public static void main(String[] args) {
+    public static void main(String arg[]) {
         Circle circleDefault = new Circle();
         System.out.println("Default Circle Radius: " + circleDefault.getRadius());
 
