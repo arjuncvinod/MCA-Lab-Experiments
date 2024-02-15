@@ -42,17 +42,16 @@ class AreaCalculator {
         scanner.close();
     }
 
-    // Method to calculate the area of a circle
+
     static double calculateArea(double radius) {
         return Math.PI * radius * radius;
     }
 
-    // Method to calculate the area of a rectangle
+
     static double calculateArea(double length, double width) {
         return length * width;
     }
 
-    // Method to calculate the area of a triangle
     static double calculateArea(double base, double height) {
         return 0.5 * base * height;
     }
