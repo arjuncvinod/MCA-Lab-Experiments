@@ -2,3 +2,4 @@
 *.exe
 *.pyc
 __pycache__
+*.class
