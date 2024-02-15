@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class AreaCalculator {
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Select a shape to calculate area:");
