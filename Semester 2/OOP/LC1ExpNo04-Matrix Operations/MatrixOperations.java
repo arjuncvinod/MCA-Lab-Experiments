@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class MatrixOperations {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter details for the first matrix:");
