@@ -29,7 +29,7 @@ class Complex {
         System.out.println(real + " + " + imaginary + "i");
     }
 
-    public static void main(String[] args) {
+    public static void main(String arg[]) {
         Complex complex1 = new Complex(2.0f, 3.0f);
         Complex complex2 = new Complex(1.0f, 2.0f);
 
