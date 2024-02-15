@@ -1,10 +1,14 @@
 class Bank {
     String accountHolderName;
     float accountBalance;
+    String accountNumber;
+    String accountType;
 
-    Bank(String accountHolderName, float initialBalance) {
+    Bank(String accountHolderName, float initialBalance, String accountNumber, String accountType) {
         this.accountHolderName = accountHolderName;
         this.accountBalance = initialBalance;
+        this.accountNumber = accountNumber;
+        this.accountType = accountType;
     }
 
     void deposit(float amount) {
@@ -31,17 +35,17 @@ class Bank {
 
     void displayAccountDetails() {
         System.out.println("Account Holder: " + accountHolderName);
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Account Type: " + accountType);
         System.out.println("Account Balance: " + accountBalance);
     }
 
-    public static void main(String arg[]) {
-        Bank bankAccount = new Bank("Tony Stark", 500.0f);
+    public static void main(String args[]) {
+        Bank bankAccount = new Bank("Tony Stark", 500.0f, "123456789", "SAVINGS");
 
-    
         bankAccount.deposit(1000);
         bankAccount.withdraw(500);
 
-    
         System.out.println("\nFinal Account Details:");
         bankAccount.displayAccountDetails();
     }
