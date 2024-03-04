@@ -1,56 +1,51 @@
-import java.util.Scanner;
+import java.util.*;
+class Shape{
+void Area(float r){
+System.out.println("Area of Circle: "+3.14*r*r);
+}
 
-class AreaCalculator {
+void Area(int l,int b){
+System.out.println("Area of Rectangle: "+l*b);
+}
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+void Area(float b,float h){
+System.out.println("Area of Triagle: "+.5*b*h);
+}
+}
 
-        System.out.println("Select a shape to calculate area:");
-        System.out.println("1. Circle");
-        System.out.println("2. Rectangle");
-        System.out.println("3. Triangle");
+class AreaCalculator{
+public static void main(String ar[]){
+int c,p=1;
+Scanner s=new Scanner(System.in);
+Shape sh=new Shape();
+while (p!=0){
+System.out.print("\n1.Circle\n2.Rectangle\n3.Triangle\n4.Exit\nEnter your Choice: ");
+c=s.nextInt();
+switch(c){
+case 1: System.out.print("\nEnter the radius: ");
+        float r=s.nextFloat();
+        sh.Area(r);
+        break;
+case 2: System.out.print("\nEnter the Length: ");
+        int l=s.nextInt();
+        System.out.print("\nEnter the Breadth: ");
+        int b= s.nextInt();
+        sh.Area(l,b);
+        break;
+case 3: System.out.print("\nEnter the length: ");
+        float len=s.nextFloat();
+        System.out.print("\nEnter the height: ");
+        float h=s.nextFloat();
+        sh.Area(len,h);
+        break;
+case 4: p=0;
+        break;
 
-        int choice = scanner.nextInt();
+default : System.out.println("\nInvalid Input");
+        break;
 
-        switch (choice) {
-            case 1:
-                System.out.print("Enter the radius of the circle: ");
-                float radiusCircle = scanner.nextFloat();
-                System.out.println("Area of the circle: " + calculateAreaCircle(radiusCircle));
-                break;
+}
 
-            case 2:
-                System.out.print("Enter the length of the rectangle: ");
-                float lengthRectangle = scanner.nextFloat();
-                System.out.print("Enter the width of the rectangle: ");
-                float widthRectangle = scanner.nextFloat();
-                System.out.println("Area of the rectangle: " + calculateAreaRectangle(lengthRectangle, widthRectangle));
-                break;
-
-            case 3:
-                System.out.print("Enter the base of the triangle: ");
-                float baseTriangle = scanner.nextFloat();
-                System.out.print("Enter the height of the triangle: ");
-                float heightTriangle = scanner.nextFloat();
-                System.out.println("Area of the triangle: " + calculateAreaTriangle(baseTriangle, heightTriangle));
-                break;
-
-            default:
-                System.out.println("Invalid choice. Please select a valid shape.");
-        }
-
-        scanner.close();
-    }
-
-    static float calculateAreaCircle(float radius) {
-        return (float) (Math.PI * radius * radius);
-    }
-
-    static float calculateAreaRectangle(float length, float width) {
-        return length * width;
-    }
-
-    static float calculateAreaTriangle(float base, float height) {
-        return 0.5f * base * height;
-    }
+}
+}
 }
