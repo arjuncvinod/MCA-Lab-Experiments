@@ -2,5 +2,5 @@
 
 # MCA Lab Experiments
 
-[SEM 1](https://github.com/arjuncvinod/MCA-Lab-Experiments/Semester%201)
-[SEM 2](https://github.com/arjuncvinod/MCA-Lab-Experiments/Semester%202)
+[SEM 1](https://github.com/arjuncvinod/MCA-Lab-Experiments/tree/main/Semester%201) <br>
+[SEM 2](https://github.com/arjuncvinod/MCA-Lab-Experiments/tree/main/Semester%202)
