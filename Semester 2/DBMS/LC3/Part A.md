@@ -165,3 +165,4 @@
     JOIN EMP M ON E.MGR = M.EMPNO 
     WHERE M.ENAME = 'RAM';
     ```
+ [Go to Part B](Part%20B.md)
