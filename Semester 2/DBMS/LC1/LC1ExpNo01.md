@@ -208,7 +208,7 @@ SELECT manager_id FROM employee WHERE Name = 'Ram';
 ```sql
  SELECT e.Name AS EmployeeName, m.Name AS ManagerName
     FROM employee e
-    LEFT JOIN employee m ON e.manager_id = m.ID;
+    LEFT JOIN manager m ON e.manager_id = m.ID;
 
 ```
 ##### 17. Find the average salary of each department.
